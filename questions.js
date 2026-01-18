@@ -48,5 +48,16 @@ const questionBank = [
         output: "true",
         python: "def hasCycle(head):\n    # Write your Python code here\n    pass",
         java: "public boolean hasCycle(ListNode head) {\n    return false;\n}"
+    },
+    {
+        id: 5,
+        pattern: "Linked List",
+        title: "revers linked list ",
+        desc: "print revers of this linked list",
+        input: "head = [3,2,0,-4]",
+        output: "[-4,0,2,3]",
+        python: "def revers(head):\n    # Write your Python code here\n    pass",
+        java: "public boolean revers(ListNode head) {\n    return false;\n}"
     }
+
 ];
