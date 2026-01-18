@@ -39,25 +39,18 @@ const questionBank = [
         python: "def findPeak(nums):\n    # Write your Python code here\n    pass",
         java: "public int findPeak(int[] nums) {\n    return 0;\n}"
     },
-    {
+     {
         id: 4,
-        pattern: "Linked List",
-        title: "Detect Cycle",
-        desc: "Determine if the linked list has a cycle in it.",
-        input: "head = [3,2,0,-4], pos = 1",
-        output: "true",
-        python: "def hasCycle(head):\n    # Write your Python code here\n    pass",
-        java: "public boolean hasCycle(ListNode head) {\n    return false;\n}"
-    },
-    {
-        id: 5,
-        pattern: "Linked List",
-        title: "revers linked list ",
-        desc: "print revers of this linked list",
-        input: "head = [3,2,0,-4]",
-        output: "[-4,0,2,3]",
-        python: "def revers(head):\n    # Write your Python code here\n    pass",
-        java: "public boolean revers(ListNode head) {\n    return false;\n}"
+        pattern: "Binary Search",
+        title: "Find place of element",
+        desc: "there are n elements in this find which element is missing and find posistion where it shoud exixst . Find the index.",
+        input: "[1,2,2,1] , tar = 3 " ,
+        output: "2",
+        python: "def findpos(nums):\n    # Write your Python code here\n    pass",
+        java: "public int findPos(int[] nums) {\n    return 0;\n}"
     }
+    
+    
 
 ];
+
