@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALWARMANIMARAN INTERFACE
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 h-screen flex flex-col overflow-hidden">
+
+    <nav class="bg-white border-b px-6 py-3 flex justify-between items-center shadow-sm z-10">
+        <div class="flex items-center gap-3">
+            <span class="text-2xl">🚀</span>
+            <h1 class="text-xl font-bold text-slate-800 tracking-tight">ALWARMANIMARAN.AI</h1>
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2">
+                <label class="text-xs font-bold text-gray-400 uppercase">Language:</label>
+                <select id="langSelect" onchange="switchLanguage()" class="bg-gray-100 border-none rounded px-3 py-1 text-sm font-semibold text-blue-600 focus:ring-2 focus:ring-blue-500">
+                    <option value="python">Python 3</option>
+                    <option value="java">Java 11</option>
+                </select>
+            </div>
+            <div id="timer" class="font-mono text-lg font-bold text-orange-500 bg-orange-50 px-3 py-1 rounded border border-orange-100">30:00</div>
+        </div>
+    </nav>
+
+    <div class="flex flex-1 overflow-hidden">
+        <aside class="w-72 bg-white border-r flex flex-col">
+            <div class="p-4 border-b bg-gray-50">
+                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest">Daily Progress (5/5)</h3>
+            </div>
+            <nav id="sidebar-list" class="flex-1 overflow-y-auto">
+                </nav>
+        </aside>
+
+        <div class="w-1/3 bg-white p-8 border-r overflow-y-auto">
+            <div id="pattern-tag" class="inline-block px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter bg-blue-100 text-blue-700"></div>
+            <h2 id="q-title" class="text-2xl font-bold text-slate-900 mt-2"></h2>
+            <div id="q-desc" class="mt-4 text-gray-600 leading-relaxed text-sm"></div>
+            
+            <div class="mt-8 space-y-4">
+                <div class="p-4 bg-slate-50 rounded-lg border border-slate-100">
+                    <p class="text-[10px] font-bold text-slate-400 uppercase">Expected Input</p>
+                    <code id="q-input" class="text-sm text-slate-700 block mt-1"></code>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-lg border border-slate-100">
+                    <p class="text-[10px] font-bold text-slate-400 uppercase">Expected Output</p>
+                    <code id="q-output" class="text-sm text-slate-700 block mt-1"></code>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-1 flex flex-col bg-gray-100 relative">
+            <div class="bg-white border-b px-4 py-2 text-[10px] font-bold text-gray-400 flex justify-between">
+                <span id="editor-label">CODE EDITOR</span>
+                <span class="text-blue-500">AUTO-SAVING ON</span>
+            </div>
+            
+            <textarea id="editor" class="flex-1 p-6 font-mono text-sm outline-none bg-white border-none leading-relaxed text-slate-800" spellcheck="false"></textarea>
+            
+            <div class="h-56 bg-slate-900 flex flex-col shadow-2xl">
+                <div class="bg-slate-800 px-4 py-2 text-[10px] font-bold text-slate-400 flex justify-between items-center">
+                    <span>TERMINAL OUTPUT</span>
+                    <button onclick="clearConsole()" class="hover:text-white transition">CLEAR</button>
+                </div>
+                <div id="console-output" class="flex-1 p-4 font-mono text-xs text-green-400 overflow-y-auto whitespace-pre leading-5">
+> System Initialized...
+> Status: Awaiting Code Submission.
+                </div>
+            </div>
+
+            <div class="p-4 bg-white border-t flex justify-end gap-3">
+                <button onclick="runCode()" class="px-6 py-2 border border-slate-300 rounded text-sm font-semibold text-slate-600 hover:bg-slate-50 transition">Run Tests</button>
+                <button onclick="submitCode()" class="px-8 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded font-bold text-sm shadow-md transition">Submit & Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
